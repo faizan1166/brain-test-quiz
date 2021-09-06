@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BRAIN TEST</title>
+    <meta name="description" content="Browser based game where you decide if the number of items on the image matches the displayed number.">
+    <meta name="head" content="Faizan Ansari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <main id="game-area">
+      <div class="stats">
+        <div id="statsContent">
+          <h3>
+            Score: <span id="currentScore"></span> /
+            <span id="totalAvailable"></span>
+          </h3>
+
+          <p class="items">
+            <span id="number"></span>
+            <span id="item-name"></span>
+          </p>
+          <div class="match-buttons">
+            <button onclick="match()">&#10003;</button>
+            <button onclick="noMatch()">&#10007;</button>
+          </div>
+        </div>
+      </div>
+      <div class="imageArea">
+        <h3 id="message"></h3>
+        <div id="startScreen">
+          <h1>WELCOME, <em>CHECK YOUR BRAIN </em></h1>
+          <em class="space-y">The rules are :- </em>
+          <p class="space-y">
+            &#9654; Hit True if the number of items on the image matches
+            the displayed number.
+          </p>
+          <p class="space-y">&#9654; Hit False if no match!</p>
+          <p class="space-y">
+            You have <span id="timeSetting"></span> seconds to decide.
+          </p>
+        </div>
+        <button id="playButton" onclick="play()">Play!</button>
+        <div class="text-center" id="imageContainer"></div>
+      </div>
+    </main>
+
+    <script src="assets/js/match.js"></script>
+
+  </body>
+</html>
